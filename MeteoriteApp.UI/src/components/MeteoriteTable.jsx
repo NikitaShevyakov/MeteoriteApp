@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef,useMemo } from 'react';
 import {
   Paper, Table, TableHead, TableBody, TableFooter, Box,
   TableRow, TableCell, TablePagination,
@@ -18,8 +18,14 @@ export default function MeteoriteTable({
   const page = filters.page - 1;
   const rowsPerPage = filters.limit;
   const displayedRows = rows;
-  const totalCountOnPage = displayedRows.reduce((s, r) => s + r.count, 0);
-  const totalMassOnPage  = displayedRows.reduce((s, r) => s + r.mass,  0);
+  const [totalCountOnPage, totalMassOnPage] = useMemo(() => {
+    let count = 0, mass = 0;
+    for (const r of displayedRows) {
+      count += r.count;
+      mass += r.mass;
+    }
+    return [count, mass];
+  }, [displayedRows]);
 
   // размеры контейнера скролла
   const HEADER = 56, FOOTER = 72;

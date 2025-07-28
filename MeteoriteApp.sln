@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36109.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MeteoriteApp.WinServices", "MeteoriteApp.WinServices", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeteoriteApp.Domain", "MeteoriteApp.Data\MeteoriteApp.Domain.csproj", "{7E9C6A09-7C0D-44AA-9743-083D142B5A2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeteoriteApp.Api", "MeteoriteApp.Api\MeteoriteApp.Api.csproj", "{3E5868E8-B9C8-461B-AE9C-F777F653FA13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NasaSyncService", "MeteoriteApp.WinServices\NasaSyncService\NasaSyncService.csproj", "{E5B484E4-C4FE-9FBA-8A6B-88F7F9E62D73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeteoriteApp.Infrastructure", "MeteoriteApp.Infrastructure\MeteoriteApp.Infrastructure.csproj", "{B4F2272F-C291-6F21-6F5A-7CE8754AF072}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E9C6A09-7C0D-44AA-9743-083D142B5A2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E9C6A09-7C0D-44AA-9743-083D142B5A2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E9C6A09-7C0D-44AA-9743-083D142B5A2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E9C6A09-7C0D-44AA-9743-083D142B5A2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E5868E8-B9C8-461B-AE9C-F777F653FA13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E5868E8-B9C8-461B-AE9C-F777F653FA13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E5868E8-B9C8-461B-AE9C-F777F653FA13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E5868E8-B9C8-461B-AE9C-F777F653FA13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5B484E4-C4FE-9FBA-8A6B-88F7F9E62D73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5B484E4-C4FE-9FBA-8A6B-88F7F9E62D73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5B484E4-C4FE-9FBA-8A6B-88F7F9E62D73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5B484E4-C4FE-9FBA-8A6B-88F7F9E62D73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4F2272F-C291-6F21-6F5A-7CE8754AF072}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4F2272F-C291-6F21-6F5A-7CE8754AF072}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4F2272F-C291-6F21-6F5A-7CE8754AF072}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4F2272F-C291-6F21-6F5A-7CE8754AF072}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E5B484E4-C4FE-9FBA-8A6B-88F7F9E62D73} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {33B1B123-9B98-4FB9-8D10-50879FF0DA1F}
+	EndGlobalSection
+EndGlobal

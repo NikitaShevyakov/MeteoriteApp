@@ -2,7 +2,7 @@
 
 namespace MeteoriteApp.Infrastructure.Services.Sync
 {
-    public abstract class BaseSyncService<T> 
+    public class BaseSyncService<T> 
         : ISyncService<T> where T : class
     {
         private readonly IRepository<T> _repository;

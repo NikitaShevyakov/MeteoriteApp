@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MeteoriteApp.Infrastructure.Repositories
 {
-    public abstract class BaseRepository<T> 
+    public class BaseRepository<T> 
         : IRepository<T> where T : class
     {
         private readonly MeteoriteDbContext _context;

@@ -1,4 +1,5 @@
 ﻿using MeteoriteApp.Domain.Models;
+using MeteoriteApp.Infrastructure.Database.Entities.Meteorites;
 using MeteoriteApp.Infrastructure.External.DTO;
 using MeteoriteApp.Infrastructure.HttpClients;
 using MeteoriteApp.Infrastructure.Mapping.DomainToEntity;
@@ -18,10 +19,10 @@ namespace MeteoriteApp.Infrastructure.Services
         private readonly MeteoriteRepository _meteoriteRepository;
         private readonly ILogger<MeteoriteService> _logger;
         private readonly HttpUtils _http;
-        private readonly CategorySyncService _categorySyncService;
-        private readonly ClassificationSyncService _classificationSyncService;
-        private readonly GeolocationTypeSyncService _geolocationTypeSyncService;
-        private readonly DiscoveryStatusSyncService _discoveryStatusSyncService;
+        private readonly ISyncService<CategoryEntity> _categorySyncService;
+        private readonly ISyncService<ClassificationEntity> _classificationSyncService;
+        private readonly ISyncService<GeolocationTypeEntity> _geolocationTypeSyncService;
+        private readonly ISyncService<DiscoveryStatusEntity> _discoveryStatusSyncService;
 
         private const string DataUrl = "https://raw.githubusercontent.com/biggiko/nasa-dataset/refs/heads/main/y77d-th95.json";
 
@@ -29,10 +30,10 @@ namespace MeteoriteApp.Infrastructure.Services
             HttpUtils http,
             MeteoriteRepository meteoriteRepository,
             ILogger<MeteoriteService> logger,
-            CategorySyncService categorySyncService,
-            ClassificationSyncService classificationSyncService,
-            GeolocationTypeSyncService geolocationTypeSyncService,
-            DiscoveryStatusSyncService discoveryStatusSyncService)
+            ISyncService<CategoryEntity> categorySyncService,
+            ISyncService<ClassificationEntity> classificationSyncService,
+            ISyncService<GeolocationTypeEntity> geolocationTypeSyncService,
+            ISyncService<DiscoveryStatusEntity> discoveryStatusSyncService)
         {
             _http = http;
             _meteoriteRepository = meteoriteRepository;
